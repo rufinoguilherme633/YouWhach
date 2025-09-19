@@ -1,0 +1,29 @@
+<div class="pagina-videos-alta">
+
+  <h1>Vídeos em Alta</h1>
+
+  {{#if videos.length}}
+  <ul class="lista-videos-alta">
+    {{#each videos}}
+      <li class="item-video-alta" id="{{this.id_video}}" onclick="window.location.href='/video/{{this.id_video}}'">
+        
+        <!-- Thumbnail -->
+        <img src="/{{this.thumbnail}}" alt="Thumbnail do vídeo" class="thumbnail-video-alta">
+
+        <!-- Informações -->
+        <div class="info-video-alta">
+          <h3 class="titulo-video-alta">{{this.titulo}}</h3>
+
+          <div class="meta-video-alta">
+            <span>👁️ {{this.views}}</span>
+            <span>📅 {{this.createdAt}}</span>
+          </div>
+        </div>
+      </li>
+    {{/each}}
+  </ul>
+  {{else}}
+    <p>Nenhum vídeo encontrado.</p>
+  {{/if}}
+
+</div>

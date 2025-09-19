@@ -1,0 +1,45 @@
+<div class="video-page">
+
+  <!-- Vídeo principal -->
+  <div class="video-principal">
+    {{#if video.caminho}}
+      <video src="/{{video.caminho}}" controls autoplay class="video-player"></video>
+      
+      <h2 class="video-titulo">{{video.titulo}}</h2>
+      
+      <div class="video-info">
+        <span class="video-views">👁️ {{video.views}} visualizações</span>
+        <span class="video-data">📅 {{video.formattedDate}}</span>
+        <p class="video-descricao">{{video.descricao}}</p>
+      </div>
+    {{else}}
+      <p>Nenhum vídeo encontrado.</p>
+    {{/if}}
+  </div>
+
+  <!-- Lista de vídeos relacionados -->
+  <div class="video-lista">        
+    {{#if videos.length}}
+      <ul>
+        {{#each videos}}
+          <li class="video-item" id="{{this.id_video}}" onclick="window.location.href='/video/{{this.id_video}}'">
+            
+            <!-- Thumbnail -->
+            <img src="/{{this.thumbnail}}" alt="Thumbnail do vídeo" class="video-thumbnail">
+
+            <!-- Informações -->
+            <div class="video-item-info">
+              <h3 class="video-item-titulo">{{this.titulo}}</h3>
+              
+              <div class="video-item-meta">
+                <span>👁️ {{this.views}}</span>
+                <span>📅 {{this.formattedDate}}</span>
+              </div>
+            </div>
+          </li>
+        {{/each}}
+      </ul>
+    {{/if}}
+  </div>
+
+</div>

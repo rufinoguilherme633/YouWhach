@@ -1,0 +1,87 @@
+/* Página de login ocupa a tela inteira */
+.pagina-login {
+    display: flex;
+    flex-direction: row;
+    align-items: center;     /* centraliza verticalmente */
+    justify-content: center; /* centraliza horizontalmente */
+    width: 100%;
+    height: 100vh;           /* ocupa toda a tela */
+}
+
+/* Logo e formulário dividem metade da tela cada */
+.container-logo,
+.container-formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 50%;
+}
+
+
+.logo {
+   
+    width: 90%;  /* nunca passa da largura do container */
+    height: auto;    /* mantém a proporção */
+}
+
+
+/* Formulário centralizado */
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80%;   /* ajustei um pouco p/ não esmagar */
+    width: 70%;    /* ocupa mais espaço dentro da metade da tela */
+    gap: 15px;     /* espaçamento entre inputs/botão */
+}
+
+/* Inputs */
+.container-input {
+  position: relative;
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  padding: 20px 15px 8px; 
+  font-size: 1rem;
+  border: 2px solid #c2c2c2;
+  border-radius: 10px;
+  outline: none;
+  background: transparent;
+  transition: 0.3s ease;
+}
+
+.input:focus {
+  border-color: #2153E4;
+}
+
+.label {
+  position: absolute;
+  left: 20px;
+  top: -8px; 
+  font-size: 0.8rem;
+  color: #444;
+  background: white;
+  padding: 0 5px;
+  pointer-events: none;
+}
+
+/* Botão */
+.button-login {
+    background-color: #F89000;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.button-login:hover {
+    background-color: #d97900;
+}

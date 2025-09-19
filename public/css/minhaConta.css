@@ -1,0 +1,68 @@
+.minha-conta{
+       display: flex;
+    flex-direction: column;
+    
+  justify-content: center;
+    width: 70%;
+    height: 100%;
+    display: flex;
+       align-items: center;
+     margin-left: 20%;
+           
+}
+.form-minha-conta {
+    display: flex;
+ flex-direction: column;
+    gap: 20px;
+}
+
+
+.container-form-meus-dados{
+     flex-wrap: wrap;
+     display: flex;
+         display: flex;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.user-photo {
+    flex: 1 1 100%;
+    text-align: center;
+}
+
+.foto-usuario {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.form-group {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group input {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+
+.container-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button-criar {
+    
+    background-color: #F89000;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}

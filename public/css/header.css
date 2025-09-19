@@ -1,0 +1,43 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: max-content;
+    height: max-content;
+    position: fixed;
+    right: 1%;
+    top: 1%;
+}
+.user{
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: row;
+   cursor: pointer;
+}
+
+
+
+
+ .button-criar{
+    background-color: #F89000;
+    color: white;
+    font-weight: bold;
+    border-radius: 13px;
+    padding: 7px 17px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 1rem;
+}
+
+.button-criar {
+    background-color: #d97900;
+}
+
+.header-foto-usuario{
+    border-radius: 50px;
+    max-width: 50px;
+    max-height: 50px;
+}

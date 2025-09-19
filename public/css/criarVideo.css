@@ -1,0 +1,65 @@
+/* Container geral da página criar vídeo */
+.criar-video-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  margin-left: 20%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Formulário */
+.criar-video-page .criar-video-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Form group específico da página criar vídeo */
+.criar-video-page .criar-video-form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 100%;
+}
+
+.criar-video-page .criar-video-form-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.criar-video-page .criar-video-form-group input,
+.criar-video-page .criar-video-form-group textarea {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.criar-video-page .criar-video-form-group textarea {
+  resize: vertical;
+}
+
+/* Botão específico da página criar vídeo */
+.criar-video-page .criar-video-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.criar-video-page .button-criar-video {
+  background-color: #F89000;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.criar-video-page .button-criar-video:hover {
+  background-color: #e07b00;
+}

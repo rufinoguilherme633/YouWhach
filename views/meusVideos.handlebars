@@ -1,0 +1,72 @@
+<div class="pagina-meus-videos">
+  <h1>Meus Vídeos</h1>
+
+  {{#if videos.length}}
+  <ul class="container-lista-videos">
+    {{#each videos}}
+    <li class="container-info-video" id="{{this.id_video}}" onclick="window.location.href='/video/{{this.id_video}}'"
+        data-titulo="{{this.titulo}}"
+        data-descricao="{{this.descricao}}"
+        data-views="{{this.views}}"
+        data-thumbnail="{{this.thumbnail}}">
+      
+      <!-- Thumbnail -->
+      <img src="/{{this.thumbnail}}" alt="Thumbnail do vídeo" class="img_thumbnail">
+
+      <!-- Informações -->
+      <div class="container-info-text-video">
+        <h3>{{this.titulo}}</h3>
+
+        <!-- Ações -->
+        <div class="video-icons">
+          <button onclick="event.stopPropagation(); abrirModalEditar(this.closest('li'))">
+            <i class="fa-solid fa-pen" title="Editar"></i>
+          </button>
+
+          <button onclick="event.stopPropagation(); abrirModalDeletar('{{this.id_video}}')">
+            <i class="fa-solid fa-trash" title="Deletar"></i>
+          </button>
+        </div>
+      </div>
+    </li>
+    {{/each}}
+  </ul>
+  {{else}}
+  <p>Nenhum vídeo encontrado.</p>
+  {{/if}}
+</div>
+
+<!-- Modal Deletar -->
+<div id="modal-deletar" class="modal" style="display:none;">
+  <div class="modal-content">
+    <h2>Deseja realmente deletar este vídeo?</h2>
+    <form id="form-deletar" method="">
+      <div class="container-buttons">
+        <button type="button" class="button confirmar-button" onclick="deletar(event)">Confirmar</button>
+        <button type="button" class="button fechar-button" onclick="fecharModalDeletar()">Cancelar</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Modal Editar -->
+<div id="modal-editar" class="modal" style="display:none;">
+  <div class="modal-content">
+    <h2>Editar Vídeo</h2>
+    <form id="form-editar" method="">
+      <div class="form-group">
+        <img id="thumbnail-meu-video" class="thumbnail-editar" readonly>
+        <label for="titulo-meu-video">Título:</label>
+        <input type="text" id="titulo-meu-video" name="titulo">
+        <label for="descricao-meu-video" name="descricao"</label>>Descrição:</label>
+        <input type="text" id="descricao-meu-video">
+        <label for="views-meu-video" >Views:</label>
+        <input type="text" id="views-meu-video" readonly>
+      </div>
+      <div class="container-buttons">
+        <button type="button" class="button confirmar-button" onclick="atualizar(event)">Confirmar</button>
+        <button type="button" class="button fechar-button" onclick="document.getElementById('modal-editar').style.display='none'">Cancelar</button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,96 @@
+/* Container principal da página */
+.minha-conta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 40px 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Formulário */
+.form-minha-conta {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 900px; /* largura máxima do formulário */
+}
+
+/* Container dos dados (inputs + foto) */
+.container-form-meus-dados {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Foto do usuário */
+.user-photo {
+    flex: 1 1 100%;
+    text-align: center;
+}
+
+.foto-usuario {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 2px solid #ddd;
+}
+
+/* Grupo de campos */
+.form-group {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: border 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #F89000;
+}
+
+/* Botão */
+.container-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-criar {
+    background-color: #F89000;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.button-criar:hover {
+    background-color: #d97800;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .form-group {
+        flex: 1 1 100%;
+    }
+}

@@ -1,0 +1,60 @@
+<div class="minha-conta">
+  <h1>Minha Conta</h1>
+
+  <form action="/usuario/conta" method="POST" enctype="multipart/form-data" class="form-minha-conta">
+
+    <div class="container-form-meus-dados">
+
+     
+      <div class="user-photo">
+        <input type="file" id="foto" name="foto" style="display: none;">
+        <label for="foto">
+          <img src="/img/usuario sem foto.svg" alt="Foto do usuário" class="foto-usuario">
+        </label>
+      </div>
+
+     
+      <div class="form-group">
+        <label>Nome</label>
+        <input type="text" name="nome" value="Guilherme">
+      </div>
+
+     
+      <div class="form-group">
+        <label>Sobrenome</label>
+        <input type="text" name="sobrenome" value="Rufino">
+      </div>
+
+      
+      <div class="form-group">
+        <label>E-mail</label>
+        <input type="email" name="email" value="guilherme@email.com">
+      </div>
+
+        <div class="form-group">
+        <label>Senha</label>
+        <input type="password" name="senha" required>
+        </div>
+
+     
+      <div class="form-group">
+        <label>Telefone</label>
+        <input type="text" name="telefone" value="11999999999">
+      </div>
+
+      
+      <div class="form-group">
+        <label>Gênero</label>
+    <select name="genero" id="select-genero">
+    <!-- as opções serão adicionadas pelo JS -->
+  </select>
+      </div>
+
+    </div>
+
+    <div class="container-button">
+      <button type="submit" class="button-criar">Criar</button>
+    </div>
+
+  </form>
+</div>

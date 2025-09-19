@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Font Awesome CDN -->
+<script src="https://kit.fontawesome.com/9b4c6c9ff0.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/meusVideos.css">
+    <link rel="stylesheet" href="/css/menu.css">
+    <link rel="stylesheet" href="/css/video.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/minhaConta.css">
+    <link rel="stylesheet" href="/css/modalDeletarVideo.css">
+    <link rel="stylesheet" href="/css/emAlta.css">
+    <link rel="stylesheet" href="/css/criarVideo.css">
+    <link rel="stylesheet" href="/css/configuracoes.css">
+
+
+</head>
+<body>
+     {{>header}}
+     {{#unless noLayout}}
+        {{>menu}}
+     {{/unless }}
+
+    {{{body}}}
+
+
+    <script src="/js/abrirModalDeletarVideo.js"></script>
+     <script src="/js/selectGenero.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<div class="criar-video-page">
+  <h1>Criar Vídeo</h1>
+
+  <form class="criar-video-form" action="/video/criar_video" method="post" enctype="multipart/form-data">
+
+    <div class="criar-video-form-group">
+      <label for="titulo">Título do Vídeo</label>
+      <input type="text" id="titulo" name="titulo" placeholder="Digite o título" required>
+    </div>
+
+    <div class="criar-video-form-group">
+      <label for="descricao">Descrição</label>
+      <textarea id="descricao" name="descricao" rows="4" placeholder="Digite a descrição" required></textarea>
+    </div>
+
+    <div class="criar-video-form-group">
+      <label for="video">Selecione o vídeo</label>
+      <input type="file" id="video" name="caminho" accept="video/*" required>
+    </div>
+
+    <div class="criar-video-button-container">
+      <button type="submit" class="button-criar-video">Criar Vídeo</button>
+    </div>
+
+  </form>
+</div>

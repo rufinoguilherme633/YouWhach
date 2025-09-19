@@ -1,0 +1,77 @@
+.pagina-meus-videos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    margin-left: 20%;        /* espaço para a sidebar fixa */
+    box-sizing: border-box;
+    overflow-x: hidden;
+    padding: 100px 20px 20px 20px;
+    height: max-content;
+}
+
+
+.container-lista-videos {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* ocupar container pai */
+    gap: 20px;
+}
+
+.container-info-video {
+    display: flex;
+    flex-wrap: wrap; /* permite quebrar elementos */
+    gap: 20px;
+    width: 100%;
+    border: 2px solid #cfcfcf;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 10px;
+    align-items: center;
+}
+
+.img_thumbnail {
+    width: 100%;
+    max-width: 200px; /* limita o tamanho */
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.container-info-text-video {
+    flex: 1; /* ocupa o resto sem quebrar */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.video-icons {
+    display: flex;
+    gap: 15px;               /* espaço entre os ícones */
+    justify-content: flex-end; /* alinhar à direita do container */
+    align-items: center;
+}
+
+.video-icons button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 5px;             /* aumenta a área clicável */
+    transition: transform 0.2s, color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-icons button:hover {
+    transform: scale(1.1);    /* leve efeito de zoom */
+}
+
+.video-icons i.fa-pen {
+    color: #4caf50;           /* verde para editar */
+}
+
+.video-icons i.fa-trash {
+    color: #f44336;           /* vermelho para deletar */
+}

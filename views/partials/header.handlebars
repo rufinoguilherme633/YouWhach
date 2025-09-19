@@ -1,0 +1,13 @@
+<header class="header">
+    <button class="button-criar" onclick="window.location.href='/video/criarMeuVideo'">
+        <img src="" alt="" >
+        criar
+    </button>
+
+    {{#if user}}
+        <span class="user" onclick="window.location.href='/usuario/minha_conta'">
+            <img src="{{user.foto}}" alt="" class="header-foto-usuario">
+            {{user.nome}}
+        </span>
+    {{/if}}
+</header>
