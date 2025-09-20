@@ -23,7 +23,13 @@
 
 </head>
 <body>
-     {{>header}}
+
+    
+
+     {{#unless noHeader}}
+          {{>header}}
+      {{/unless}}
+
      {{#unless noLayout}}
         {{>menu}}
      {{/unless }}
@@ -33,5 +39,7 @@
 
     <script src="/js/abrirModalDeletarVideo.js"></script>
      <script src="/js/selectGenero.js"></script>
+     <script src="/js/deletarConta.js"></script>
+
 </body>
 </html>

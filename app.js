@@ -49,13 +49,13 @@ app.use("/video",VideoController);
 app.use("/usuario",UsuarioController)
 
 app.get("/login", (req,res) => {
-    res.render("login", {noLayout: true})
+    res.render("login", {noLayout:true, noHeader:true})
 })
-
+// criar os databases
 
 // db.sequelize.sync({ force: true })
-//   .then(() => console.log("Tabelas criadas com sucesso"))
-//   .catch(err => console.error("Erro ao criar tabelas:", err));
+//    .then(() => console.log("Tabelas criadas com sucesso"))
+//    .catch(err => console.error("Erro ao criar tabelas:", err));
 
 app.post("/logar", async (req, res) => {
     const { email, password } = req.body;
@@ -99,13 +99,13 @@ console.log(req.body);
 
 app.get('/criarConta',(req,res)=>{
     
-    res.render('criarConta',{noLayout:true})
+    res.render('criarConta',{noLayout:true, noHeader:true})
 })
 
 
 app.get('/configuracoes',(req,res)=>{
     
-    res.render('configuracoes')
+    res.render('configuracoes',{ userId: req.session.user.id })
 })
 
 

@@ -5,8 +5,23 @@
   <div class="acoes-criticas">
     <h2>Apagar Conta</h2>
     <p>Cuidado: esta ação é permanente.</p>
-    <form action="/usuario/apagar-conta" method="POST" onsubmit="return confirm('Tem certeza que deseja apagar sua conta?');">
-      <button type="submit" class="button-apagar-conta">Apagar Conta</button>
+    <form action="" method="">
+      <button type="button" class="button-apagar-conta" onclick="abrirModalDeletarConta({{userId}})">Apagar Conta</button>
+    </form>
+  </div>
+</div>
+
+
+
+
+<div id="modal-deletar-conta" class="modal" style="display:none;">
+  <div class="modal-content">
+    <h2>Deseja realmente apagar sua conta?</h2>
+    <form id="form-deletar-conta" method="">
+      <div class="container-buttons">
+        <button type="button" class="button confirmar-button" onclick="deletarConta(event)">Confirmar</button>
+        <button type="button" class="button fechar-button" onclick="fecharModalDeletarConta()">Cancelar</button>
+      </div>
     </form>
   </div>
 </div>

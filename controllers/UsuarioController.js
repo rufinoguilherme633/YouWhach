@@ -7,6 +7,47 @@ const fs = require("fs");
 const multer = require("multer");
 const path = require("path");
 const { where } = require("sequelize");
+
+
+router.post("/deletarConta/:id", async (req,res)=>{
+    try {
+        const usuario = await Usuario.findOne({
+            where: { id_usuario: req.params.id }
+        });
+
+        if (!usuario) {
+            return res.status(404).send({ message: "usuario não encontrado ou não disponível" });
+        }
+        console.log(req.params.id)
+        console.log("req.session.user.id "+req.session.user.id)
+        if (parseInt(req.params.id) !==  parseInt(req.session.user.id)){
+            return res.status(403).send({ message: "Você não possui permissão para deletar este conta" });
+        }
+
+        await Usuario.destroy({
+            where: { id_usuario: req.params.id }
+        });
+
+ req.session.destroy(err => {
+            if (err) {
+                console.error("Erro ao destruir sessão:", err);
+                // Mesmo que dê erro, redireciona para login
+                    return res.render("login", {noLayout:true, noHeader:true})
+
+            }
+                 return res.render("login", {noLayout:true, noHeader:true})
+
+        });
+
+ 
+       
+
+    } catch (error) {
+        console.error(error);
+        return res.status(500).send({ message: "Erro no servidor" });
+    }
+})
+
 router.get("/minha_conta", async (req, res) => {
     try {
         if (!req.session.user) {
